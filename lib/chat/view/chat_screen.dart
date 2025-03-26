@@ -11,8 +11,18 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const DefaultLayout(
-      child: Center(
-        child: Column(),
+      child: Column(
+        children: [
+          Center(
+            child: Text(
+              '채팅방 제목',
+              style: TextStyle(
+                  fontSize: 20,
+                  color: BODY_TEXT_COLOR,
+                  fontWeight: FontWeight.bold),
+            ),
+          )
+        ],
       ),
     );
   }

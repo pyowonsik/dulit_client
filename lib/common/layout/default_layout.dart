@@ -22,7 +22,10 @@ class DefaultLayout extends StatelessWidget {
     return Scaffold(
       backgroundColor: backgroundColor ?? PRIMARY_COLOR,
       appBar: renderAppBar(),
-      body: child,
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: child,
+      ),
       bottomNavigationBar: bottomNavigationBar,
       floatingActionButton: floatingActionButton,
     );
