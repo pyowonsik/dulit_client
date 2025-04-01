@@ -17,27 +17,30 @@ class PostScreen extends ConsumerWidget {
     final state = ref.watch(postProvider); // 상태 구독
 
     return const DefaultLayout(
-      child: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  '전체 데이트 여행',
-                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-                ),
-                Icon(
-                  Icons.add_circle,
-                  color: BODY_TEXT_COLOR,
-                  size: 32,
-                )
-              ],
-            ),
-            SizedBox(height: 20),
-            PostCard(),
-          ],
+      child: Padding(
+        padding: EdgeInsets.all(32.0),
+        child: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    '전체 데이트 여행',
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.add_circle,
+                    color: BODY_TEXT_COLOR,
+                    size: 32,
+                  )
+                ],
+              ),
+              SizedBox(height: 20),
+              PostCard(),
+            ],
+          ),
         ),
       ),
     );

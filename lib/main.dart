@@ -4,6 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
 import 'package:dulit_client/common/view/root_tab.dart';
+import 'package:dulit_client/post/view/post_detail_screen.dart';
 import 'package:dulit_client/user/view/login_screen.dart';
 
 void main() {
@@ -35,6 +36,10 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path: '/home',
       builder: (context, state) => const RootTab(),
+    ),
+    GoRoute(
+      path: '/post/:id',
+      builder: (context, state) => const PostDetailScreen(),
     ),
   ],
 );

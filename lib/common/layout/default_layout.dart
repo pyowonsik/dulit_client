@@ -19,15 +19,14 @@ class DefaultLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: backgroundColor ?? PRIMARY_COLOR,
-      appBar: renderAppBar(),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: child,
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: backgroundColor ?? PRIMARY_COLOR,
+        appBar: renderAppBar(),
+        body: child,
+        bottomNavigationBar: bottomNavigationBar,
+        floatingActionButton: floatingActionButton,
       ),
-      bottomNavigationBar: bottomNavigationBar,
-      floatingActionButton: floatingActionButton,
     );
   }
 
